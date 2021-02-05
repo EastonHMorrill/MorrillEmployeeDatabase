@@ -1,5 +1,5 @@
 class Person:
-    def__init__(self, firstname = "J.", lastname = "Doe", wage = 10.00, hours = 40.00):
+    def __init__(self, firstname = "J.", lastname = "Doe", wage = 10.00, hours = 40.00):
         self.firstname = firstname
         self.lastname = lastname
         self.wage = wage
@@ -9,9 +9,9 @@ class Person:
         firstname, lastname = input("Hello! What is your full name?: ").split(" ")
         self.firstname = firstname
         self.lastname = lastname
-        wage = input("What is your hourly wage? [$##.##]")
+        wage = input("What is your hourly wage? [$##.##]: ")
         self.wage = wage
-        hours = input("How many hours did you work this week? [Estimate one decimal (##.#)]")
+        hours = input("How many hours did you work this week? [Estimate one decimal (##.#)]: ")
         self.hours = hours
 
     def setFirstname(self, firstname):

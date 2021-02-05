@@ -5,27 +5,59 @@ import Person
 MorePeople = True
 People = []
 
-File = Open('File.txt', 'r')
+File = open('File.txt', 'r')
 Filelines = File.readlines()
 
-firstname = []
-lastname = []
-wage = []
-hours = []
-
 for x in Filelines: 
-    firstname.append(x.split()[0])
-    lastname.append(x.split()[1])
-    float(wage.append(x.split()[2]))
-    int(hours.append(x.split()[3]))
+    NewEmployee = Person.Person(x.split(" "))
+    People.append(NewEmployee)
 
-File.close
-
-Print(firstname)
-
+File.close()
 
 #Ask for employee information
 
 #Create a plain text file that has all of the relevant employee information
 
 #Create a menu that will present the user options aboutwhat they may want to do 
+
+menu = {}
+menu['1']= "- Add Employee"
+menu['2']= "- Delete Employee"
+menu['3']= "- Find Employee"
+menu['4']= "- Exit Menu"
+
+Bool = True
+
+while Bool:
+    options=menu.keys()
+    for entry in options:
+        print(entry, menu[entry])
+    
+    selection=input("Please Select 1-4:")
+    if selection =='1':
+        print("     Add")
+        NewEmployee = Person.Person()
+        NewEmployee.getPerson()
+        #Need to add to the text file
+
+    elif selection =='2':
+        print("     Delete")
+        #Who would you like to delete? (Lastname)
+        if input == Person.lastname():
+            delete Person.row[]
+        def Deleteline():
+
+
+    elif selection =='3':
+        print("     Edit")
+        #Who's account would you like to edit? (Lastname)
+
+    elif selection =='4':
+        print("     Exit")
+        Bool = False
+
+
+    else:
+        print("Please Select 1-4:")
+
+

@@ -10,9 +10,11 @@ for x in Filelines:
     info = x.split(" ")
     if (len(info) == 4):
         NewEmployee = Person.Person(info[0], info[1], info[2], info[3])
-    People.append(NewEmployee)
+        People.append(NewEmployee)
 
 File.close()
+
+print(len(People))
 
 menu = {}
 menu['1']= "- Add Employee"
@@ -48,7 +50,6 @@ while Bool:
         firstname, lastname = input().split(" ")
         for emp in People:
             if(emp.firstname == firstname and emp.lastname == lastname):
-                People.append(emp)
                 
                 NewBool=True
 
@@ -85,6 +86,9 @@ while Bool:
                     elif selection == '5':
                         print("\n Finished Editing: ")
                         NewBool = False
+                        break
+                    
+                    break
             else: 
                 print("Please Select 1-5: ")
 

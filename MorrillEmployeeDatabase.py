@@ -48,43 +48,45 @@ while Bool:
         firstname, lastname = input().split(" ")
         for emp in People:
             if(emp.firstname == firstname and emp.lastname == lastname):
-               People.append(emp)
+                People.append(emp)
+                
+                NewBool=True
 
-        newmenu={}
-        newmenu['1']= "- Edit Firstname"
-        newmenu['2']= "- Edit Lastname"
-        newmenu['3']= "- Edit Wage"
-        newmenu['4']= "- Edit Hours"
-        newmenu['5']= "- Finish Editing"
+                newmenu={}
+                newmenu['1']= "- Edit Firstname"
+                newmenu['2']= "- Edit Lastname"
+                newmenu['3']= "- Edit Wage"
+                newmenu['4']= "- Edit Hours"
+                newmenu['5']= "- Finish Editing"
 
-        NewBool = True
-
-        while NewBool:
-            options=menu.keys()
-            for entry in options:
-             print(entry, newmenu[entry])
+                while NewBool:
+                    options=newmenu.keys()
+                    for entry in options:
+                        print(entry, newmenu[entry])
     
-            selection=input("Please Select 1-5: ")
+                    selection=input("Please Select 1-5: ")
 
-            if selection == '1':
-                firstname = input("\n Enter New Firstname: ")
-                People.append(firstname)
+                    if selection == '1':
+                        firstname = input("\n Enter New Firstname: ")
+                        People.append(firstname)
             
-            if selection == '2':
-                lastname = input("\n Enter New Lastname: ")
-                People.append(lastname)
+                    elif selection == '2':
+                        lastname = input("\n Enter New Lastname: ")
+                        People.append(lastname)
             
-            if selection == '3':
-                wage = input("\n Enter New Wage: ")
-                People.append(wage)
+                    elif selection == '3':
+                        wage = input("\n Enter New Wage: ")
+                        People.append(wage)
 
-            if selection == '4':
-                hours = input("\n Enter New Hours: ")
-                people.append(hours)
+                    elif selection == '4':
+                        hours = input("\n Enter New Hours: ")
+                        people.append(hours)
 
-            if selection == '5':
-                print("\n Finished Editing: ")
-                NewBool = False
+                    elif selection == '5':
+                        print("\n Finished Editing: ")
+                        NewBool = False
+            else: 
+                print("Please Select 1-5: ")
 
     elif selection =='4':
         print("\n Exit: ")
@@ -99,6 +101,6 @@ while Bool:
 
 
     else:
-        print("Please Select 1-4:")
+        print("Please Select 1-4: ")
 
 

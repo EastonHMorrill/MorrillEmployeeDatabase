@@ -7,7 +7,9 @@ File = open('File.txt', 'r')
 Filelines = File.readlines()
 
 for x in Filelines: 
-    NewEmployee = Person.Person(x.split(" "))
+    info = x.split(" ")
+    if (len(info) == 4):
+        NewEmployee = Person.Person(info[0], info[1], info[2], info[3])
     People.append(NewEmployee)
 
 File.close()
@@ -27,9 +29,10 @@ while Bool:
     
     selection=input("Please Select 1-4: ")
     if selection =='1':
-        print("\n Add: ")         ##\n should end the line
+        print("\n Add: ")
         NewEmployee = Person.Person()
         NewEmployee.getPerson()
+        People.append(NewEmployee)
 
     elif selection =='2':
         print("\n Delete: ")
@@ -77,11 +80,11 @@ while Bool:
 
             if selection == '4':
                 hours = input("\n Enter New Hours: ")
-                people.append(Hours)
+                people.append(hours)
 
             if selection == '5':
                 print("\n Finished Editing: ")
-
+                NewBool = False
 
     elif selection =='4':
         print("\n Exit: ")
